@@ -1,0 +1,15 @@
+Lisa,Chester,19
+Anna,Ross,18
+Audrey,Smith,19
+Bruce,Robertson,20
+Boris,Jones,17
+Augusta,Walter,23
+Carl,Murphy,19
+Carla,Williams,22
+Curtis,Cook,21
+Daisy,Nail,19
+Dexter,Round,24
+Douglas,Fairy,21
+Frankie,Walls,23
+Gerald,Robin,18
+Kimberly,Mason,20

@@ -1,0 +1,8 @@
+com\jpaapp\init\Init.class
+com\jpaapp\Main.class
+com\jpaapp\entities\Student.class
+com\jpaapp\repositary\GroupeRepositary.class
+com\jpaapp\services\GroupService.class
+com\jpaapp\entities\Group.class
+com\jpaapp\repositary\StudentRepositary.class
+com\jpaapp\services\StudentService.class
