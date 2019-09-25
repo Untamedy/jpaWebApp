@@ -6,6 +6,7 @@
 package com.jpaapp.services;
 
 import com.jpaapp.entities.Group;
+import com.jpaapp.init.FactoryCreater;
 import com.jpaapp.repositary.GroupeRepositary;
 import com.jpaapp.repositary.StudentRepositary;
 import java.util.List;
@@ -19,16 +20,17 @@ import javax.persistence.EntityManagerFactory;
 public class GroupService {
 
     public static final Logger LOGGER = Logger.getLogger(GroupService.class.getName());
-
+    
     private EntityManagerFactory managerFactory;
+    private FactoryCreater creater;
     private StudentRepositary studentService;
     private GroupeRepositary groupeRepositary;
 
-    public GroupService() {
-    }
+    
 
-    public GroupService(EntityManagerFactory managerFactory) {
-        this.managerFactory = managerFactory;
+    public GroupService() {
+        this.creater = new FactoryCreater();
+        this.managerFactory = creater.getEntittyManagerFactoty();
         this.studentService = new StudentRepositary(managerFactory);
         this.groupeRepositary = new GroupeRepositary(managerFactory);
     }

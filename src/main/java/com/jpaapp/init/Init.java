@@ -1,6 +1,5 @@
 package com.jpaapp.init;
 
-import com.jpaapp.entities.Group;
 import com.jpaapp.entities.Student;
 import com.jpaapp.services.GroupService;
 import com.jpaapp.services.StudentService;

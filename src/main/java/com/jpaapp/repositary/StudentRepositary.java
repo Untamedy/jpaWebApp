@@ -1,7 +1,6 @@
 package com.jpaapp.repositary;
 
 import com.jpaapp.entities.Student;
-import com.jpaapp.services.StudentService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -27,12 +26,13 @@ public class StudentRepositary {
     }
 
     public void addStudent(Student student) {
-        boolean isExists = false;
         try {
             transaction = entityManager.getTransaction();
-            transaction.begin();
-            entityManager.persist(student);
-            transaction.commit();
+            if (!isExists(student)) {
+                transaction.begin();
+                entityManager.persist(student);
+                transaction.commit();
+            }
         } catch (Exception ex) {
             if (transaction != null) {
                 transaction.rollback();
@@ -101,7 +101,7 @@ public class StudentRepositary {
     }
 
     public List<Student> getAllStudents() {
-      List<Student> students = new ArrayList<>();
+        List<Student> students = new ArrayList<>();
         try {
             students = entityManager.createQuery("SELECT s FROM Student AS s").getResultList();
         } catch (Exception ex) {
@@ -109,5 +109,17 @@ public class StudentRepositary {
         }
         return students;
     }
-
+    
+    public boolean isExists(Student student){
+        boolean isStudentExists = false;
+        List<Student> students = findByLastname(student.getLastname());
+        if(!students.isEmpty()){
+            for(Student s: students){
+                if((student.getLastname().equals(s.getLastname())&&(student.getName().equals(s.getName())&&(student.getAge()==s.getAge())))){
+            return isStudentExists = true;
+            }
+        }
+    }
+return  isStudentExists;
+}
 }

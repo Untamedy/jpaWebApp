@@ -10,9 +10,6 @@ import com.jpaapp.init.Init;
 import com.jpaapp.services.GroupService;
 import com.jpaapp.services.StudentService;
 import java.util.List;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -22,17 +19,15 @@ import org.junit.Test;
  * @author Lenovo
  */
 public class StudentServiceTest {
-
-    private static EntityManagerFactory entityManagerFactory;
+   
     private static StudentService studentService;
     private static Init init;       
     private static GroupService groupService;
 
     @BeforeClass
-    public static void init() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("JpaAppMySql");
-        studentService = new StudentService(entityManagerFactory);
-        groupService = new GroupService(entityManagerFactory);
+    public static void init() {  
+        studentService = new StudentService();
+        groupService = new GroupService();
         init = new Init(studentService,groupService);        
         init.createGroup();
         init.createStudent();        
@@ -43,7 +38,7 @@ public class StudentServiceTest {
         studentService.addStudent("Jack", "Test", 25);
         studentService.addStudent("Jill", "Test2", 21);
         List<Student> studentList = studentService.findByLastname("Test");
-        assertNotNull(studentList.get(0).equals("Test"));
+        assertTrue(studentList.get(0).getLastname().equals("Test"));
 
     }
 
@@ -71,14 +66,14 @@ public class StudentServiceTest {
 
     @Test
     public void findByGroupTest() {
-        List<Student> st = studentService.findByGroup("zz_2");
+        List<Student> st = studentService.findByGroup("qq_1");
         String groupCode = st.get(0).getGroup().getCode();
-        assertTrue(groupCode.equals("zz_2"));
+        assertTrue(groupCode.equals("qq_1"));
     }
 
     @Test
     public void deleteTest() {
-        studentService.deleteStudent("Chester", "Lisa", "qq_1");
+        studentService.deleteStudent("Chester", "Lisa", "ht_4");
         assertTrue(studentService.findByLastname("Chester").isEmpty());
     }
 

@@ -22,16 +22,15 @@ import org.junit.Test;
  */
 public class GroupServiceTest extends Assert{
     
-    private static EntityManagerFactory entityManagerFactory;
+   
     private static GroupService groupService;
     private static StudentService studentService;
     private static Init init;        
     
     @BeforeClass
-    public static void init(){
-    entityManagerFactory = Persistence.createEntityManagerFactory("JpaAppMySql");
-    groupService = new GroupService(entityManagerFactory);
-    studentService = new StudentService(entityManagerFactory);
+    public static void init(){    
+    groupService = new GroupService();
+    studentService = new StudentService();
     init = new Init(studentService,groupService);
      init.createGroup();  
     }
