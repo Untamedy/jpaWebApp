@@ -22,7 +22,10 @@
             List<Group> groups = (List<Group>) request.getAttribute("list");
             if(!groups.isEmpty()){
                  for (Group g : groups) {
-                <button onclick="location.href='/Questionnaire'">Back to main</button>;
+                     
+                              
+  
+                     
             }
             }else{
                 out.println("<h1>" + "Sorry, we don't have any information yet" + "</h1>");
