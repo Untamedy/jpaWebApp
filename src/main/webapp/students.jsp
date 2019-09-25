@@ -5,6 +5,7 @@
 --%>
 
 
+<%@page import="com.jpaapp.entities.Student"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core" %>
 <%@page import="com.jpaapp.entities.Group"%>
 <%@page import="java.util.List"%>
@@ -20,11 +21,12 @@
     </body>
     <ul>
         <%
-            List<Group> groups = (List<Group>) request.getAttribute("list");
-            if (!groups.isEmpty()) {
-                for (Group g : groups) {
+            List<Student> students = (List<Student>) request.getAttribute("list");
+           out.println("<h1>" +"Group"+ request.getParameter("code")+"</h1>");
+            if (!students.isEmpty()) {
+                for (Student s : students) {
 
-                    out.println("<a href='\"link?code=" + g.getCode() + "'>" + "Group " + g.getCode() + "</a>");
+                    out.println("<h1>" + s.toString() + "</h1>");
 
                 }
             } else {
@@ -33,7 +35,7 @@
 
         %>
         <div>
-            <button onclick="location.href = '/Questionnaire'">Back to main</button>
+            <button onclick="location.href = 'index.jsp'">Back to main</button>
         </div>
     </ul>
 </html>

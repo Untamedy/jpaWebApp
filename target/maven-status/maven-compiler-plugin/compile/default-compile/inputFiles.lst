@@ -1,8 +1,13 @@
+C:\Users\Lenovo\Documents\JpaApp\src\main\java\servlets\StudentServlet.java
+C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\repositary\GroupeRepositary.java
+C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\Main.java
+C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\init\FactoryCreater.java
 C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\entities\Student.java
 C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\entities\Group.java
-C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\repositary\GroupeRepositary.java
+C:\Users\Lenovo\Documents\JpaApp\src\main\java\servlets\GroupServlet.java
 C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\init\Init.java
+C:\Users\Lenovo\Documents\JpaApp\src\main\java\servlets\CreateStudentServlet.java
 C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\services\GroupService.java
 C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\services\StudentService.java
-C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\Main.java
 C:\Users\Lenovo\Documents\JpaApp\src\main\java\com\jpaapp\repositary\StudentRepositary.java
+C:\Users\Lenovo\Documents\JpaApp\src\main\java\servlets\ViewGroupServlet.java

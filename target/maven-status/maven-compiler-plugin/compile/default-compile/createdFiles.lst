@@ -1,8 +1,13 @@
+servlets\CreateStudentServlet.class
+servlets\ViewGroupServlet.class
+com\jpaapp\services\GroupService.class
+com\jpaapp\repositary\StudentRepositary.class
 com\jpaapp\init\Init.class
 com\jpaapp\Main.class
 com\jpaapp\entities\Student.class
+servlets\GroupServlet.class
+servlets\StudentServlet.class
 com\jpaapp\repositary\GroupeRepositary.class
-com\jpaapp\services\GroupService.class
+com\jpaapp\init\FactoryCreater.class
 com\jpaapp\entities\Group.class
-com\jpaapp\repositary\StudentRepositary.class
 com\jpaapp\services\StudentService.class
