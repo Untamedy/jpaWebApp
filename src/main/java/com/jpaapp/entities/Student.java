@@ -97,7 +97,7 @@ public class Student implements Serializable {
 
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", name=" + name + ", lastname=" + lastname + ", age=" + age + ", group=" + group.getCode() + '}';
+        return  name + " " + lastname+ " " + "age:"+  age;
     }
     
     

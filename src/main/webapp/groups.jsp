@@ -22,9 +22,9 @@
             List<Group> groups = (List<Group>) request.getAttribute("list");
             if (!groups.isEmpty()) {
                 for (Group g : groups) {
-
-                    out.println("<a href='group?code=" + g.getCode() + "'>" + "Group " + g.getCode() + "</a>" + "\n");
-
+                    out.println("<br>");
+                    out.println("<a href='group?code=" + g.getCode() + "'>" + "Group " + g.getCode() + "</a>");
+                    out.println("<br>");
                 }
             } else {
                 out.println("<h1>" + "Sorry, we don't have any information yet" + "</h1>");
@@ -33,8 +33,6 @@
         %>
         <br>
         <br>
-        <div>
-            <button onclick="location.href = 'listGroups'">Back to main</button>
-        </div>
+        
     </ul>
 </html>
