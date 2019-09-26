@@ -7,11 +7,7 @@ package servlets;
 
 import com.jpaapp.entities.Group;
 import com.jpaapp.services.GroupService;
-import com.jpaapp.services.StudentService;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;

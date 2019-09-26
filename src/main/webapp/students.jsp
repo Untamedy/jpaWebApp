@@ -6,7 +6,6 @@
 
 
 <%@page import="com.jpaapp.entities.Student"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core" %>
 <%@page import="com.jpaapp.entities.Group"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -35,7 +34,7 @@
 
         %>
         <div>
-            <button onclick="location.href = 'index.jsp'">Back to main</button>
+            <button onclick="location.href = 'listGroups'">Back to main</button>
         </div>
     </ul>
 </html>

@@ -5,7 +5,6 @@
 --%>
 
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core" %>
 <%@page import="com.jpaapp.entities.Group"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -24,7 +23,7 @@
             if (!groups.isEmpty()) {
                 for (Group g : groups) {
 
-                    out.println("<a href='\"link?code=" + g.getCode() + "'>" + "Group " + g.getCode() + "</a>");
+                    out.println("<a href='group?code=" + g.getCode() + "'>" + "Group " + g.getCode() + "</a>" + "\n");
 
                 }
             } else {
@@ -32,8 +31,10 @@
             }
 
         %>
+        <br>
+        <br>
         <div>
-            <button onclick="location.href = '/Questionnaire'">Back to main</button>
+            <button onclick="location.href = 'listGroups'">Back to main</button>
         </div>
     </ul>
 </html>
